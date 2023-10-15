@@ -16,7 +16,6 @@ function Navbar() {
     toggleUnit,
     units,
     setIsLoading,
-    searchBar,
     setSearchBar,
   } = useWeatherContext();
 

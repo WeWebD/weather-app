@@ -12,7 +12,6 @@ const loadOptions = async (searchQuery) => {
   //       console.log(error.toJSON().message);
   //     });
   const resJSON = await res.json();
-  console.log(resJSON);
   return {
     options:
       resJSON.results.map((city) => {

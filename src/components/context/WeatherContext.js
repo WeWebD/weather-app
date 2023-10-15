@@ -5,6 +5,7 @@ import AirPolutionTable from "../../helpers/AirPolutionTable";
 import VisibilityTable from "../../helpers/VisibilityTable";
 
 const WeatherContext = createContext();
+const API_KEY = process.env.REACT_APP_API_KEY;
 
 const Provider = ({ children }) => {
   const [weather, setWeather] = useState(null);
@@ -40,7 +41,7 @@ const Provider = ({ children }) => {
   const geoSuccess = async (position) => {
     const responseGeoCoding = await axios
       .get(
-        `http://api.openweathermap.org/geo/1.0/reverse?lat=${position.coords.latitude}&lon=${position.coords.longitude}&limit=5&appid=9176b2bbec1c3a475b03aa880dd8bd5c
+        `http://api.openweathermap.org/geo/1.0/reverse?lat=${position.coords.latitude}&lon=${position.coords.longitude}&limit=5&appid=${API_KEY}
         `
       )
       .then((res) => {
@@ -240,11 +241,9 @@ const Provider = ({ children }) => {
     let weatherForSearchedPlace, airQualityForSearchedPlace;
 
     if (searchData) {
-
       weatherForSearchedPlace = await fetchCurrentWeather(searchData);
 
       airQualityForSearchedPlace = await fetchAirQuality(searchData);
-
     } else {
       return setTimeout(() => {
         loadWeather();
@@ -320,11 +319,12 @@ const Provider = ({ children }) => {
     VisibilityTable,
     weather,
     setError,
-    searchBar, setSearchBar,
+    searchBar,
+    setSearchBar,
     error,
     units,
     geoData,
-    setGeoData
+    setGeoData,
   };
 
   return (
