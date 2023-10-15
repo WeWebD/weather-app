@@ -1,3 +1,10 @@
+
+<div style="flex">
+
+<img width="447" alt="Screenshot 2023-10-15 at 18 52 10" src="https://github.com/WeWebD/weather-app/assets/103128944/07b5268e-34c4-4235-986d-8ca3c8823ea5">
+<img width="447" alt="Screenshot 2023-10-15 at 18 52 19" src="https://github.com/WeWebD/weather-app/assets/103128944/b3a82163-9a9a-43b5-97e2-4b69bc098ccc">
+</div>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -6,7 +13,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-### `npm start`
+### `npm start`![Uploading Screenshot 2023-10-15 at 18.52.10.png…]()
+
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
